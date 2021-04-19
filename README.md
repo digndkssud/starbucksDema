@@ -1,4 +1,9 @@
 # starbucksDema
+# library
+-lodash cnd
+-gsap cnd
+-swiperjs
+
 
 # ご覧になる方法
 
@@ -35,12 +40,24 @@ fadeEls.forEach(function (fadeEl, index){
 });
 ```
 
-![image](https://user-images.githubusercontent.com/61581807/115199255-fc188e00-a12d-11eb-8532-5c11d3dd4587.png)
+swiperjs(슬라이드 표현)
 
+```html
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"></div>
+  </div>
+</div>
+```
 
-
-
-function 명령 1234444
+```js
+<!-- new Swiper(선택자, 옵션) -->
+new Swiper('.notice-line .swiper-container', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true
+});
+```
 
 
 
