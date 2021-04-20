@@ -19,6 +19,8 @@
 
 # 2021-04-20(css calc, pagination, navigation)
 
+css calc(가운데 정렬 방법)
+```
 .notice .promotion .swiper-container {
   width: calc(819px * 3 + 20px);
   /* width: clac(100% - 50px); */
@@ -28,8 +30,10 @@
   left: 50%;
   margin-left: calc((819px * 3 + 20px) / -2);
 }
+```
 
-
+pagination, navigation
+```
 new Swiper('.promotion .swiper-container', {
   // direction: 'horizontal', // 수평 슬라이드
   autoplay: { // 자동 재생 여부
@@ -48,7 +52,7 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
   }
 });
-
+```
 
 ![image](https://user-images.githubusercontent.com/61581807/115364693-9f38d880-a1fe-11eb-9ef1-07d9e7877096.png)
 
