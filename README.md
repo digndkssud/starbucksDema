@@ -1,8 +1,8 @@
 # starbucksDema
-# library
--lodash cnd
--gsap cnd
--swiperjs
+# Library
+### lodash cnd
+### gsap cnd
+### swiperjs
 
 
 # ご覧になる方法
@@ -17,36 +17,78 @@
 ![3](https://user-images.githubusercontent.com/61581807/115184098-16e00800-a118-11eb-8c93-c1d0d7e5ab86.png)
 
 
+# 2021-04-20(css calc, pagination, navigation)
+
+.notice .promotion .swiper-container {
+  width: calc(819px * 3 + 20px);
+  /* width: clac(100% - 50px); */
+  height: 553px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
 
 
-# 2021-04-19
+new Swiper('.promotion .swiper-container', {
+  // direction: 'horizontal', // 수평 슬라이드
+  autoplay: { // 자동 재생 여부
+    delay: 5000 // 5초마다 슬라이드 바뀜
+  },
+  loop: true, // 반복 재생 여부
+  slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
+  spaceBetween: 10, // 슬라이드 사이 여백
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  pagination: { // 페이지 번호 사용 여부
+    el: '.promotion .swiper-pagination', // 페이지 번호 요소 선택자
+    clickable: true // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
+  navigation: { // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: '.promotion .swiper-prev', // 이전 버튼 선택자
+    nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
+  }
+});
+
+
+![image](https://user-images.githubusercontent.com/61581807/115364693-9f38d880-a1fe-11eb-9ef1-07d9e7877096.png)
+
+
+
+
+
+
+# 2021-04-19(반복 애니메이션 코드(순차적) , 수직 슬라이드)
 
 반복 애니메이션 코드
 
 ```j
-//CSS
+//css
 .visual .fade-in{
   opacity: 0;
 }
 
-//JS
+//javascript
 const fadeEls = document.querySelectorAll('.visual .fade-in');
-fadeEls.forEach(function (fadeEl, index){
+fadeEls.forEach(function (fadeEl, index) {
   // gsap.to(요소, 지속시간, 옵션);
-   gsap.to(fadeEl, 1, {
-     delay: (index + 1) * .7, // 0.7, 1.4, 2.1, 2.8
-     opacity: 1
-   });
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7, // 0.7, 1.4, 2.1, 2.8
+    opacity: 1
+  });
 });
 ```
 
 swiperjs(슬라이드 표현)
 
 ```html
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"></div>
+<div class="notice-line">
+...
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"></div>
+    </div>
   </div>
+...
 </div>
 ```
 
@@ -58,7 +100,6 @@ new Swiper('.notice-line .swiper-container', {
   loop: true
 });
 ```
-
 
 ![image](https://user-images.githubusercontent.com/61581807/115207755-d479f380-a136-11eb-9970-34d988ef4ee2.png)
 
