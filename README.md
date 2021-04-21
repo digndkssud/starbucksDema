@@ -3,7 +3,7 @@
 ### lodash cnd
 ### gsap cnd
 ### swiperjs
-
+### Youtube IFrame API
 
 # ご覧になる方法
 
@@ -15,6 +15,18 @@
 
 
 ![3](https://user-images.githubusercontent.com/61581807/115184098-16e00800-a118-11eb-8c93-c1d0d7e5ab86.png)
+
+
+
+
+
+# 2021-04-21(padding-top: 56.25%=> 16:9 비율, youtube iframe api, gsap easing)
+
+
+<a src="https://developers.google.com/youtube/iframe_api_reference?hl=ko">IFrame Player API</a>
+
+![image](https://user-images.githubusercontent.com/61581807/115522160-d5418f80-a2c6-11eb-9410-ff02c5dcd0e9.png)
+
 
 
 # 2021-04-20(css calc, pagination, navigation)
