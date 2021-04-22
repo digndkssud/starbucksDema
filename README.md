@@ -1,9 +1,10 @@
 # starbucksDema
 # Library
-### lodash cnd
-### gsap cnd
+### lodash cdn
+### gsap cdn
 ### swiperjs
 ### Youtube IFrame API
+### ScrollMagic cdn
 
 # ご覧になる方法
 
@@ -19,11 +20,48 @@
 
 
 
+# 2021-04-22(medal(3D animation), ScrollMagic cdn)
+
+```
+// ScrollMagic
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+
+spyEls.forEach(function(spyEl){
+  new ScrollMagic
+  .Scene({
+    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: .8 // top 0 , bottom 1 사이에 가상의 선을 지정
+  })
+  .setClassToggle(spyEl, 'show') // triggerHook의 선을 넘으면 해당 클래스에 show를 붙인다
+  .addTo(new ScrollMagic.Controller());
+});
+
+```
+
+
+
 
 # 2021-04-21(padding-top: 56.25%=> 16:9 비율, youtube iframe api, gsap easing)
 
 
-<a src="https://developers.google.com/youtube/iframe_api_reference?hl=ko">IFrame Player API</a>
+gsap easing
+```
+function floatingObject(seletor, delay, size){
+  // gsap.to(요소, 시간, 옵션);
+  gsap.to(seletor, random(1.5, 2.5), {
+    y: size,  //y축으로 20만큼 내린다
+    repeat: -1, //무한반복
+    yoyo: true, //y축으로 20만큼 올린다
+    ease: Power1.easeInOut,
+    delay: random(0, delay)
+  });
+}
+floatingObject('.floating1', 1, 15);
+floatingObject('.floating2', .5, 15);
+floatingObject('.floating3', 1.5, 20);
+```
+
 
 ![image](https://user-images.githubusercontent.com/61581807/115522160-d5418f80-a2c6-11eb-9410-ff02c5dcd0e9.png)
 
