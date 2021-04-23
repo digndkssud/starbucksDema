@@ -15,6 +15,7 @@ searchInputEl.addEventListener('blur', function () {
 });
 
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 window.addEventListener('scroll', _.throttle(function () {
   // console.log(window.scrollY);
@@ -25,15 +26,31 @@ window.addEventListener('scroll', _.throttle(function () {
       opacity: 0,
       display: 'none'
     });
+    //버튼 보이기!
+    gsap.to(toTopEl, .2 , { 
+      x: 0
+    }); 
   } else {
     // 배지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     });
+    //버튼 숨기기!
+    gsap.to(toTopEl, .2 , { //css 아이디 바로 입력 가능 '#to-top'
+      x: 100                  // 오른쪽으로 100 보냄
+    }); 
   }
 }, 300));
 // _.throttle(함수, 시간);
+
+
+
+toTopEl.addEventListener('click', function(){
+  gsap.to(window, .7, {
+    scrollTo: 0 //화면의 위치를 0으로 옮긴다. 0.7초 동안 
+  });
+});
 
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
@@ -70,6 +87,19 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
   }
 });
+
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
+});
+
+
 
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
@@ -122,6 +152,9 @@ spyEls.forEach(function(spyEl){
   .addTo(new ScrollMagic.Controller());
 });
 
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 2021
 
 
 
