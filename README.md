@@ -26,6 +26,8 @@ branch 추가
 git branch
 git branch signin
 git checkout signin
+git add .
+git commit -m ''
 
 # 2021-04-23(footer, html entities, ScrollTo)
 
