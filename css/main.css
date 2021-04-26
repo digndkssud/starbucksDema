@@ -575,7 +575,6 @@ header .badges .badge {
 }
 
 /* REWARDS */
-
 .rewards {
   position: relative;
 }
@@ -852,7 +851,6 @@ header .badges .badge {
 }
 
 /* AWARDS */
-
 .awards {
   background-color: #272727;
 }
@@ -894,7 +892,6 @@ header .badges .badge {
 }
 
 /* FOOTER */
-
 footer {
   background-color: #272727;
   border-top: 1px solid #333;
@@ -922,7 +919,7 @@ footer .menu li::before{
 }
 footer .menu li:last-child::before{
   display: none;
-}
+}                                                                                                
 footer .menu li a {
   color: #ccc;
   font-size: 12px;
