@@ -8,26 +8,35 @@
 
 # ご覧になる方法
 
-![2](https://user-images.githubusercontent.com/61581807/115183963-c9fc3180-a117-11eb-864d-5f92721d9798.png)
-
-
-ダウンロードにした圧縮ファイルの解凍をしてください。
+https://gifted-heisenberg-813b36.netlify.app/
 
 
 
-![3](https://user-images.githubusercontent.com/61581807/115184098-16e00800-a118-11eb-8c93-c1d0d7e5ab86.png)
+# 2021-04-23 (git branch,git  reset, signin)
 
-
-
-# 2021-04-23 (git branch, signin)
-
-branch 추가
-
+```
+branch 추가 방법
 git branch
 git branch signin
 git checkout signin
-git add .
-git commit -m ''
+
+
+branch 병합(merge) 하는 방법
+
+push 후에 github에서 Pull request
+
+new pull request
+compare 부분 push한 branch 선택
+
+
+git reset --hard HEAD~숫자    // git 전버전으로 돌아가는 방법 
+
+git reset --hard ORIG_HEAD           // 잘못 돌아갔을 때 최근 깃 상태로 돌아가는 방법
+
+```
+
+![image](https://user-images.githubusercontent.com/61581807/116046079-ab64e000-a6ad-11eb-832c-37017a73e175.png)
+
 
 # 2021-04-23(footer, html entities, ScrollTo)
 
